@@ -1,13 +1,12 @@
-import { useState } from "react";
 import Header from "./components/Header";
 
-import ChefApp from "./components/ChefApp";
+import Main from "./components/Main";
 
 function App() {
   return (
     <>
       <Header />
-      <ChefApp />
+      <Main />
     </>
   );
 }
