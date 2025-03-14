@@ -24,6 +24,13 @@ function ChefApp() {
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
   }
 
+  function removeIngredient(itemToRemove) {
+    setIngredients(
+      ingredients.filter((ingredient) => ingredient !== itemToRemove)
+    );
+    console.log(ingredients);
+  }
+
   return (
     <main>
       <form action={addIngredient} className="add-ingredient-form">
@@ -40,6 +47,7 @@ function ChefApp() {
           ingredients={ingredients}
           getRecipe={getRecipe}
           ref={recipeSection}
+          removeIngredient={removeIngredient}
         />
       ) : null}
       {recipe && <Recipe recipe={recipe} />}

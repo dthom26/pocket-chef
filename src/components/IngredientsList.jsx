@@ -1,10 +1,23 @@
-export default function IngredientsList({ ingredients, getRecipe, ref }) {
+export default function IngredientsList({
+  ingredients,
+  getRecipe,
+  ref,
+  removeIngredient,
+}) {
   const ingredientsListItems = ingredients.map((ingredient) => (
-    <li key={ingredient}>{ingredient}</li>
+    <li className="ingredient" key={ingredient}>
+      {ingredient}{" "}
+      <button
+        className="remove-btn"
+        onClick={() => removeIngredient(ingredient)}
+      >
+        x
+      </button>
+    </li>
   ));
   return (
     <section>
-      <h2>Ingredients on hand:</h2>
+      <h2 className="header-for-ingredients-on-hand">Ingredients on hand:</h2>
       <ul className="ingredients-list" aria-live="polite">
         {ingredientsListItems}
       </ul>
