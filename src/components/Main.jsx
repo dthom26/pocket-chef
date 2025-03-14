@@ -28,7 +28,6 @@ function ChefApp() {
     setIngredients(
       ingredients.filter((ingredient) => ingredient !== itemToRemove)
     );
-    console.log(ingredients);
   }
 
   return (
