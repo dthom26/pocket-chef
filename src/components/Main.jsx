@@ -19,6 +19,10 @@ function ChefApp() {
     setRecipe(recipeMarkdown);
   }
 
+  function handleClearAll() {
+    setIngredients([]);
+  }
+
   function addIngredient(formData) {
     const newIngredient = formData.get("ingredient");
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
@@ -35,7 +39,7 @@ function ChefApp() {
       <form action={addIngredient} className="add-ingredient-form">
         <input
           type="text"
-          placeholder="e.g. oregano"
+          placeholder="Enter at least 4 ingredients, e.g. oregano"
           aria-label="Add ingredient"
           name="ingredient"
         />
@@ -47,6 +51,7 @@ function ChefApp() {
           getRecipe={getRecipe}
           ref={recipeSection}
           removeIngredient={removeIngredient}
+          handleClearAll={handleClearAll}
         />
       ) : null}
       {recipe && <Recipe recipe={recipe} />}

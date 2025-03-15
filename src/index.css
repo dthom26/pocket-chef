@@ -146,3 +146,33 @@ ul.ingredients-list>li {
 .remove-btn:hover {
   background-color: #ff1a1a;
 }
+
+
+
+
+.clear-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  /* Add space below the button */
+  display: block;
+  /* Ensure the button takes up the full width */
+  width: 100%;
+  /* Optional: Make the button full width */
+}
+
+.clear-btn:hover {
+  background-color: #ff1a1a;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  /* Stack children vertically */
+  gap: 16px;
+  /* Add space between the button and the container */
+}
