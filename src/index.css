@@ -9,6 +9,21 @@ main {
   /* Optional: Limits the width of the content for better readability */
   margin: 0 auto;
   /* Centers the content horizontally */
+  animation: fadeIn 1s ease-in-out;
+  /* Add fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 body {
@@ -75,8 +90,7 @@ main {
 ul.ingredients-list {
   margin-bottom: 48px;
   list-style: none;
-
-
+  animation: fadeIn 1s ease-in-out;
 }
 
 ul.ingredients-list>li {
@@ -175,4 +189,61 @@ ul.ingredients-list>li {
   /* Stack children vertically */
   gap: 16px;
   /* Add space between the button and the container */
+}
+
+.hero-container {
+
+  /* Subtle gradient */
+  padding: 4rem 2rem;
+  /* Add padding for spacing */
+  border-radius: 12px;
+  /* Soft rounded corners */
+
+  text-align: center;
+  /* Center-align the text */
+  animation: fadeIn 1s ease-in-out;
+  /* Fade-in animation */
+}
+
+.hero-text {
+  font-family: "Inter", sans-serif;
+  /* Modern, clean font */
+  font-size: 1.25rem;
+  /* Adjust size for readability */
+  font-weight: 400;
+  /* Regular weight */
+  line-height: 1.6;
+  /* Improve readability with more spacing */
+  color: #333;
+  /* Dark gray for better contrast */
+  max-width: 800px;
+  /* Limit width for better readability */
+  margin: 0 auto;
+  /* Center the text block */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (min-width: 768px) {
+  .hero-container {
+    padding: 4rem 2rem;
+    /* Larger padding on tablets and desktops */
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+    /* Larger text on larger screens */
+  }
 }

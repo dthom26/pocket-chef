@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import IngredientsList from "./IngredientsList";
 import Recipe from "./Recipe";
 import { getRecipeFromMistral } from "./ai";
+import Hero from "./Hero";
 
 function ChefApp() {
   const [ingredients, setIngredients] = useState([]);
@@ -36,6 +37,7 @@ function ChefApp() {
 
   return (
     <main>
+      <Hero />
       <form action={addIngredient} className="add-ingredient-form">
         <input
           type="text"
