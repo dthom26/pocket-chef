@@ -49,7 +49,6 @@ const PopupModal = ({ isOpen, onClose }) => {
               "State Management",
               "AI Integration",
               "API Calls",
-              "Prompt Engineering",
               "UI/UX Design",
               "Asynchronous Programming",
               "Functional Programming",
