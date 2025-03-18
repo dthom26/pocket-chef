@@ -18,7 +18,7 @@ export default function IngredientsList({
   ));
 
   return (
-    <section>
+    <section className="py-[50px]">
       <h2 className="header-for-ingredients-on-hand">Ingredients on hand:</h2>
       <ul className="ingredients-list" aria-live="polite">
         {ingredientsListItems}

@@ -3,11 +3,18 @@ import IngredientsList from "./IngredientsList";
 import Recipe from "./Recipe";
 import { getRecipeFromMistral } from "./ai";
 import Hero from "./Hero";
+import PopupModal from "./Popup";
+import Header from "./Header";
 
 function ChefApp() {
   const [ingredients, setIngredients] = useState([]);
   const [recipe, setRecipe] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(true); // State for modal
   const recipeSection = useRef(null);
+
+  const toggleModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
 
   useEffect(() => {
     if (recipe !== "" && recipeSection.current !== null) {
@@ -37,6 +44,7 @@ function ChefApp() {
 
   return (
     <main>
+      <Header toggleModal={toggleModal} />
       <Hero />
       <form action={addIngredient} className="add-ingredient-form">
         <input
@@ -57,6 +65,8 @@ function ChefApp() {
         />
       ) : null}
       {recipe && <Recipe recipe={recipe} />}
+      {/* Render the modal */}
+      <PopupModal isOpen={isModalOpen} onClose={toggleModal} />
     </main>
   );
 }

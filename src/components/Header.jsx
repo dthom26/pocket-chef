@@ -1,8 +1,10 @@
-export default function Header() {
+import Button from "./Button";
+export default function Header({ toggleModal }) {
   return (
-    <header>
+    <header className="header-container">
       <img src="/pocket-chef/chefClaudeIcon.png" alt="Logo" />
       <h1>Pocket Chef</h1>
+      <Button toggleModal={toggleModal} />
     </header>
   );
 }
